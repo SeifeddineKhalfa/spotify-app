@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SpotifyController!{% endblock %}
+
+{% block body %}
+
+    <article>
+        <header>
+            <h1>Your Top 30 Spotify Playlist is updated !</h1>
+        </header>
+        <h3>Your tracks:</h3>
+        {% for item in tracks.items %}
+            <li>{{ item.track.name }} - {{ item.track.artists[0].name }}</li>
+        {% endfor %}
+    </article>
+
+{% endblock %}
